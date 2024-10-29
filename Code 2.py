@@ -67,3 +67,12 @@ p.legend.location ="top_center"
 p.hover.renderers = [r] # only hover element boxes
 
 show(p)
+
+from bokeh.plotting import output_file, save, show
+
+# Save as an interactive HTML file
+output_file("periodic_table.html")
+save(p)  # This keeps the interactivity in the HTML file
+
+# Optionally, display the plot in a web browser
+show(p)
